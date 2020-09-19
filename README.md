@@ -1,5 +1,50 @@
+# Mini ToDoApp SPA
+### CRUD ToDo app frontend created with React
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Available Scripts](#available-scripts)
+
+## General info
+This project was created with Visual Studio Code, Javascript and React.
+
+The project is a simple CRUD ToDo app frontend and goes together with the backEnd project [MiniToDoAppAPI](https://github.com/heidiali/MiniToDoAppAPI).
+
+## Technologies
+
+Install the latest version of Visual Studio Code or another preferred editor.
+
+Dependencies:
+Bootstrap version 4.3.1 or higher,
+React version 16.8.3 or higher,
+React-bootstrap version 1.0.0-beta.5 or higher,
+React-dom version 16.8.3 or higher,
+React-router-dom version 4.3.1 or higher,
+React-scripts version 2.1.5 or higher.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Setup
+
+Clone the repo in your terminal by clicking the green clone or download button at the top right and copying the url.
+
+In your terminal, type: 
+`git clone URL`
+Replace URL with the url you copied.
+Hit enter.
+
+This will copy all the files from this repo down to your computer.
+
+In your terminal, cd into the directory you just created.
+
+Type `npm install` to install all dependencies.
+
+Last, but not least, type `npm start` to run the app locally.
+
+To look at the code, just open up the project in code editor.
+
 
 ## Available Scripts
 
