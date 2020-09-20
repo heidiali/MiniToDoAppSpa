@@ -8,7 +8,7 @@ class Footer extends Component {
                 <div className="wrapper">
                     <div className="push"></div>
                 </div>
-                <footer className="footer">ToDo app copyright: Annukka, Miklas, Heidi and Topias</footer>
+                <footer className="footer"></footer>
             </div>
         );
     }

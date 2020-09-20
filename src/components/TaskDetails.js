@@ -15,7 +15,7 @@ class TaskDetails extends Component {
         let id = this.props.match.params.taskId
         fetchone(id)
             .then((task) => {
-                console.log("Haettu task", task);
+                // console.log("Haettu task", task);
                 this.setState({ task: task });
             })
     }
@@ -32,7 +32,7 @@ class TaskDetails extends Component {
     }
     handleNameChange = (e) => {
         // this.setState({ TaskName: e.target.value })
-        console.log("handleNameC")
+        // console.log("handleNameC")
         e.persist();
         this.setState(prevState => ({
             task: {
@@ -44,7 +44,7 @@ class TaskDetails extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log("HandleSubmit käynnistyi")
+        // console.log("HandleSubmit käynnistyi")
         var formok = true;
         var auerr = '';
         var terr = '';
@@ -61,7 +61,7 @@ class TaskDetails extends Component {
             return false;
         } else {
             updateTask(this.state, () => { console.log("updated"); console.dir(this); this.props.history.push('/'); });
-            console.log("Update task käynnistyi")
+            // console.log("Update task käynnistyi")
 
             // this.setState({ TaskName: '', TaskDesc: '', formErrors: { name: '', desc: '' } });
         }
@@ -86,7 +86,7 @@ class TaskDetails extends Component {
             //     </ul>
 
             // </div>
-            //                 AKAFJDÖFKLJASDÖFJASDÖKFHASDHASDÖKGHASÖKGHASDÖKGHASDÖKGHASDÖKHGASDÖKGH
+        
             <form className='taskDetails-formi'>
                 <input
                     name="taskName"
@@ -99,7 +99,7 @@ class TaskDetails extends Component {
                     onChange={this.handleDescChange}
                     placeholder="Task Description. 400 max."></textarea>
 
-                <button variant="primary" value="Edit" class="btn btn-default btn-sm" class="glyphicon glyphicon-pencil" onClick={this.handleSubmit} >Edit</button>
+                <button variant="primary" value="Edit" className="btn btn-default btn-sm" className="glyphicon glyphicon-pencil" onClick={this.handleSubmit} >Save changes</button>
             </form>
 
 

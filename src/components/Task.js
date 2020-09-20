@@ -7,7 +7,7 @@ class Task extends Component {
         super(props);
         this.state = { TaskDesc: '', TaskName: '', TaskID: '' }
     }
-    deletequote = (e) => {
+    deletecb = (e) => {
         e.preventDefault();
         this.props.deletecb(this.props.task.TaskID);
     }
@@ -18,31 +18,29 @@ class Task extends Component {
 
     detailsRedirect = (e) => {
         e.preventDefault();
-        console.log(this.props.task.TaskName, this.props.task.TaskDesc, this.props.task.TaskID)
+        //console.log(this.props.task.TaskName, this.props.task.TaskDesc, this.props.task.TaskID)
         this.setState({ task: this.state });
 
     }
 
     render() {
         return (
-            <div className="todo-list">
-                <li>
-                    <strong>Task:</strong> {this.props.task.TaskName} <br /> <strong>Description:</strong> {this.props.task.TaskDesc} <br />Done?
-                    < input
-                        type="checkbox"
-                        checked=""
-                        onChange=""
-                    />
-                </li>
-                
-                <div className="dlink" onClick={this.deletequote}>
-                <a href="#"><span class="glyphicon glyphicon-trash"></span>
-                    </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
-                <div className="taskName" onClick={this.detailsRedirect}>
-                    <span><Link to={`/details/${this.props.task.TaskID}`}>Details</Link></span>
-                </div>
+            <div className="todo-itemgroup">
+                <div>
+                    <strong>Task:</strong> {this.props.task.TaskName} <br /> <strong>Description:</strong> {this.props.task.TaskDesc} <br />
+                    {/* Done? < input type="checkbox" checked="" onChange="" /> */}
 
+                    <div className="dlink" onClick={this.deletecb}>
+                        <a href="#">Delete?<span className="glyphicon glyphicon-trash"></span>
+                        </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+
+                    <div className="taskName" onClick={this.detailsRedirect}>
+                        <span><Link to={`/details/${this.props.task.TaskID}`}>Edit task details</Link></span>
+                    </div>
+
+                </div>
+                <br/>
 
             </div >
         );

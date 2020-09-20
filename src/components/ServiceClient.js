@@ -1,6 +1,4 @@
 
-// TÄMÄ TOIMII JA PALAUTTAA
-
 const apiUrl = "/api/";
 
 //searches all 
@@ -35,8 +33,8 @@ export function createtask(task) {
 
 
 export function updateTask(task, callback) {
-    console.log("Update task");
-    console.dir(task);
+    // console.log("Update task");
+    // console.dir(task);
     let taskid = task.taskId;
     fetch(apiUrl + 'task/' + taskid, {
         method: 'PUT',
@@ -47,21 +45,6 @@ export function updateTask(task, callback) {
             callback();
         }));
 }
-
-//EI KAI TOIMI VIELÄ
-
-// export function create(createCallback) {
-//     return fetch('/api/task/', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify(createCallback)
-//     })
-//         .then(function (response) {
-//             /*callback(response);*/
-//             return (response);
-//         });
-
-// }
 
 //deletes task
 //TODO: change /api/ -address

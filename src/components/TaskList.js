@@ -16,9 +16,10 @@ class TaskList extends Component {
 
   all = () => {
     fetchall().then(tasks => {
-      console.dir(tasks)
+      // console.dir(tasks)
+      console.log('tasks', tasks)
       this.setState({ data: tasks.TaskInfoes });
-      console.dir(this.state);
+      // console.dir(this.state);
     });
   }
 
@@ -45,11 +46,10 @@ class TaskList extends Component {
 
     return (
       <div className="taskList">
-        <h1 className="todoHeader">To Do:</h1>
-        <ul className="list-group">
+        <h1 className="todoHeader">Tasks to remember:</h1>
+        <div className="list-group">
           {taskInstances}
-        </ul>
-        <img class="image" src="http://makeameme.org/media/templates/120/grumpy_cat.jpg" alt="" width="120" height="120"></img>
+        </div>
         {/* <TaskDetails /> */}
       </div>
     );

@@ -24,16 +24,16 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                <table className="Navi">
-                    <tr>
-                        <td className="Greeting"> <br />Have a nice {timeofDay}! <br /> It's about {date.getHours() % 24} o'clock </td><p className="glyphicon glyphicon-time"></p>
-                        <td width='50%'><Link to="/" className="navi">Home</Link></td> 
+                <div className="Navi">
+                    <div>
+                        <div className="Greeting"> <br />Have a nice {timeofDay}! <br /> It's about {date.getHours() % 24} o'clock </div><p className="glyphicon glyphicon-time"></p>
+                        <div width='50%'><Link to="/" className="navi">Home</Link></div> 
                         {/* <td><Link to="/TaskList" className="navi">Task List &nbsp; </Link></td> */}
-                        <td width='50%'> &nbsp;<Link to="/Container" className="navi">Add Task</Link></td> 
+                        <div width='50%'> &nbsp;<Link to="/Container" className="navi">Add Task</Link></div> 
                     
-                    </tr> 
+                    </div> 
                     {/* <img src={logo} alt="My logo" /> */}
-                </table >
+                </div >
             </div>
         );
     }

@@ -1,10 +1,13 @@
 .Navi {
     height: 20%;
     width: 100%;
-    background: #259671;
+    background: hsl(204, 73%, 31%);
     color: whitesmoke;
     margin-bottom: 15px;
     text-align: center;
+    /* font-size: 2em;  */
+    font: italic 1.2em "Fira Sans", serif;
+    font-size: 150%;
     display: flex;
     justify-content: center;
     /* align-content: space-around; */
@@ -23,12 +26,13 @@
 
 .Greeting {
     width: 100%;
-    background: #259671;
+    background: hsl(204, 73%, 31%);
     color: whitesmoke;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1em;
-    font: Helvetica;
+    /* font-size: 1em;  */
+    font-size: 1em; 
+    font: italic 1.0em "Fira Sans", serif;
     display: flex;
     justify-content: center;
     /* align-items: center; */
